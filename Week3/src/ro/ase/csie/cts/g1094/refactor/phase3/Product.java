@@ -9,6 +9,20 @@ public class Product {
 	
 	MarketingServiceInterface mkService=null;
 	
+	public Product(MarketingServiceInterface mkService) {
+		//if(mkService == null) {
+			//throw new NullPointerException();
+		//}
+		//this.mkService = mkService;
+	}
+	
+	//optional - based on design specs
+	public void setMarketingService(MarketingServiceInterface mkService) {
+		if(mkService == null) {
+			throw new NullPointerException();
+		}
+		this.mkService = mkService;
+	}
 	public static float getDiscountValue(float price, float discount) {
 		return discount * price;
 	}
